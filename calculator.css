@@ -1,0 +1,97 @@
+:root {
+  --fs-normal: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  --fs-large: clamp(1.4rem, 1.2rem + 2vw, 2rem);
+  --regular-color: rgb(243, 243, 243);
+  --accent-color1: rgb(25, 106, 164);
+  --accent-color2: rgb(153, 55, 55);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(225, 225, 225);
+}
+
+main {
+  border: none;
+  border-radius: var(--fs-normal);
+  width: 90%;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: var(--fs-normal);
+  background-color: var(--regular-color);
+  box-shadow: 1px 1px 1000px black;
+}
+
+.input-section input {
+  width: 100%;
+  font-size: var(--fs-large);
+  outline: none;
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
+  font-weight: bold;
+  font-family: calibri;
+  cursor: default;
+  background-color: var(--regular-color);
+  caret-color: transparent;
+  border: 1px rgb(202, 202, 202) solid;
+}
+
+.buttons-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(var(--fs-normal) - 0.75em);
+  margin-top: var(--fs-normal);
+}
+
+.buttons-section button {
+  font-size: var(--fs-normal);
+  border: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 1px rgb(35, 35, 35);
+  transition: background-color 100ms ease;
+  cursor: pointer;
+}
+
+.buttons-section button:hover {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.buttons-section button:active {
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#equals-button {
+  background-color: var(--accent-color1);
+  color: white;
+  font-weight: bold;
+}
+
+#equals-button:hover {
+  background-color: rgba(25, 106, 255, 0.9);
+}
+
+#equals-button:active {
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 400px) {
+  main {
+    width: 100%;
+  }
+}
