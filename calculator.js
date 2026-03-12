@@ -24,9 +24,7 @@ allButtonElements.forEach((button) => {
       } catch (error) {
         displayAreaElement.value = 'Error'
       }
-
-      console.log(result)
-      console.log(displayAreaElement.value)
+      
       
       if (displayAreaElement.value === 'Error') {
         result = 'Error';
