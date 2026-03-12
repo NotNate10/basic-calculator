@@ -17,13 +17,21 @@ allButtonElements.forEach((button) => {
       displayAreaElement.value = '';
     } else if (buttonChar === '=') {
       let result;
+      
 
       try {
         result = eval(displayAreaElement.value);
       } catch (error) {
         displayAreaElement.value = 'Error'
       }
+
+      console.log(result)
+      console.log(displayAreaElement.value)
       
+      if (displayAreaElement.value === 'Error') {
+        result = 'Error';
+      }
+
       if (result !== NaN && result !== undefined) {
         displayAreaElement.value = result;
       } else {
